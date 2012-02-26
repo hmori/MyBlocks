@@ -25,5 +25,27 @@
             </BreakpointActionProxy>
          </Actions>
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "Yes"
+         isPathRelative = "1"
+         filePath = "MyBlocks/MBBlocksTableViewController.m"
+         timestampString = "351955819.557902"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "25"
+         endingLineNumber = "25"
+         landmarkName = "-dealloc"
+         landmarkType = "5">
+         <Actions>
+            <BreakpointActionProxy
+               ActionType = "Xcode.BreakpointAction.Sound">
+               <ActionContent
+                  soundName = "Basso">
+               </ActionContent>
+            </BreakpointActionProxy>
+         </Actions>
+      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

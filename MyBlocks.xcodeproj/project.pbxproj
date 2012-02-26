@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6419F5614FA690D00652E0C /* UITableView+BlocksKitExtends.m in Sources */ = {isa = PBXBuildFile; fileRef = B6419F5514FA690D00652E0C /* UITableView+BlocksKitExtends.m */; };
+		B6419F5914FA69E600652E0C /* MBBlocksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6419F5814FA69E600652E0C /* MBBlocksTableViewController.m */; };
 		B648707014EE46D1008E0B48 /* MBBlocksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B648706F14EE46D1008E0B48 /* MBBlocksViewController.m */; };
 		B6901BDB14E9E840004FCBDD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D2599C14E9E6DC0021726B /* MessageUI.framework */; };
 		B6AEE8DA14E96BC200FC1A50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AEE8D914E96BC200FC1A50 /* UIKit.framework */; };
@@ -65,6 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B6419F5414FA690D00652E0C /* UITableView+BlocksKitExtends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+BlocksKitExtends.h"; sourceTree = "<group>"; };
+		B6419F5514FA690D00652E0C /* UITableView+BlocksKitExtends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+BlocksKitExtends.m"; sourceTree = "<group>"; };
+		B6419F5714FA69E600652E0C /* MBBlocksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBlocksTableViewController.h; sourceTree = "<group>"; };
+		B6419F5814FA69E600652E0C /* MBBlocksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBlocksTableViewController.m; sourceTree = "<group>"; };
 		B648706E14EE46D1008E0B48 /* MBBlocksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBlocksViewController.h; sourceTree = "<group>"; };
 		B648706F14EE46D1008E0B48 /* MBBlocksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBlocksViewController.m; sourceTree = "<group>"; };
 		B6AEE8D514E96BC200FC1A50 /* MyBlocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBlocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6419F5314FA688500652E0C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B6419F5414FA690D00652E0C /* UITableView+BlocksKitExtends.h */,
+				B6419F5514FA690D00652E0C /* UITableView+BlocksKitExtends.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		B6AEE8CA14E96BC200FC1A50 = {
 			isa = PBXGroup;
 			children = (
@@ -131,12 +146,15 @@
 		B6AEE8DF14E96BC200FC1A50 /* MyBlocks */ = {
 			isa = PBXGroup;
 			children = (
+				B6419F5314FA688500652E0C /* Category */,
 				B6AEE8E814E96BC200FC1A50 /* MBAppDelegate.h */,
 				B6AEE8E914E96BC200FC1A50 /* MBAppDelegate.m */,
 				B6AEE8EB14E96BC200FC1A50 /* MBViewController.h */,
 				B6AEE8EC14E96BC200FC1A50 /* MBViewController.m */,
 				B648706E14EE46D1008E0B48 /* MBBlocksViewController.h */,
 				B648706F14EE46D1008E0B48 /* MBBlocksViewController.m */,
+				B6419F5714FA69E600652E0C /* MBBlocksTableViewController.h */,
+				B6419F5814FA69E600652E0C /* MBBlocksTableViewController.m */,
 				B6AEE8E014E96BC200FC1A50 /* Supporting Files */,
 			);
 			path = MyBlocks;
@@ -291,6 +309,8 @@
 				B6AEE8EA14E96BC200FC1A50 /* MBAppDelegate.m in Sources */,
 				B6AEE8ED14E96BC200FC1A50 /* MBViewController.m in Sources */,
 				B648707014EE46D1008E0B48 /* MBBlocksViewController.m in Sources */,
+				B6419F5614FA690D00652E0C /* UITableView+BlocksKitExtends.m in Sources */,
+				B6419F5914FA69E600652E0C /* MBBlocksTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

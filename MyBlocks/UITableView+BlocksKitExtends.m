@@ -39,9 +39,11 @@ static NSString * const kHandlerDidSelectRow = @"kHandlerDidSelectRow";
 static NSString * const kHandlerDidDeselectRow = @"kHandlerDidDeselectRow";
 static NSString * const kHandlerEditingStyleForRow = @"kHandlerEditingStyleForRow";
 static NSString * const kHandlerTitleForDeleteConfirmationButtonForRow = @"kHandlerTitleForDeleteConfirmationButtonForRow";
+static NSString * const kHandlerIndentationLevelForRow = @"kHandlerIndentationLevelForRow";
 static NSString * const kHandlerShouldIndentWhileEditingRow = @"kHandlerShouldIndentWhileEditingRow";
 static NSString * const kHandlerWillBeginEditingRow = @"kHandlerWillBeginEditingRow";
 static NSString * const kHandlerDidEndEditingRow = @"kHandlerDidEndEditingRow";
+static NSString * const kHandlerTargetIndexPathForMoveFromRow = @"kHandlerTargetIndexPathForMoveFromRow";
 static NSString * const kHandlerShouldShowMenuForRow = @"kHandlerShouldShowMenuForRow";
 static NSString * const kHandlerCanPerformAction = @"kHandlerCanPerformAction";
 static NSString * const kHandlerPerformAction = @"kHandlerPerformAction";
@@ -288,6 +290,34 @@ static NSString * const kHandlerMoveRowAtIndexPath = @"kHandlerMoveRowAtIndexPat
     if (block) {
         ((BKTableViewBlock)block)(tableView, indexPath);
     }
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
+    id ret = proposedDestinationIndexPath;
+	id realDelegate = self.realDelegate;
+	if (realDelegate && [realDelegate respondsToSelector:@selector(tableView:targetIndexPathForMoveFromRowAtIndexPath:toProposedIndexPath:)]) {
+		ret = [realDelegate tableView:tableView targetIndexPathForMoveFromRowAtIndexPath:sourceIndexPath toProposedIndexPath:proposedDestinationIndexPath];
+    }
+    NSString *key = [NSString stringWithFormat:kFormat, kHandlerTargetIndexPathForMoveFromRow, sourceIndexPath.section, sourceIndexPath.row];
+    BKTableViewMoveReturnBlock block = [self.handlers objectForKey:key];
+    if (block) {
+        ret = ((BKTableViewMoveReturnBlock)block)(tableView, sourceIndexPath, proposedDestinationIndexPath);
+    }
+    return ret;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger ret = 0;
+	id realDelegate = self.realDelegate;
+	if (realDelegate && [realDelegate respondsToSelector:@selector(tableView:indentationLevelForRowAtIndexPath:)]) {
+		ret = [realDelegate tableView:tableView indentationLevelForRowAtIndexPath:indexPath];
+    }
+    NSString *key = [NSString stringWithFormat:kFormat, kHandlerIndentationLevelForRow, indexPath.section, indexPath.row];
+    BKTableViewIndexPathReturnIntegerBlock block = [self.handlers objectForKey:key];
+    if (block) {
+        ret = ((BKTableViewIndexPathReturnIntegerBlock)block)(tableView, indexPath);
+    }
+    return ret;
 }
 
 - (BOOL)tableView:(UITableView *)tableView shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_5_0) {
@@ -602,6 +632,16 @@ static NSString * const kHandlerMoveRowAtIndexPath = @"kHandlerMoveRowAtIndexPat
 
 - (void)setHandler:(BKTableViewBlock)block forDidEndEditingRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *key = [NSString stringWithFormat:kFormat, kHandlerDidEndEditingRow, indexPath.section, indexPath.row];
+    [self setHandler:block forKey:key target:self.dynamicDelegate];
+}
+
+- (void)setHandler:(BKTableViewMoveReturnBlock)block forTargetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *key = [NSString stringWithFormat:kFormat, kHandlerTargetIndexPathForMoveFromRow, indexPath.section, indexPath.row];
+    [self setHandler:block forKey:key target:self.dynamicDelegate];
+}
+
+- (void)setHandler:(BKTableViewIndexPathReturnIntegerBlock)block forIndentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *key = [NSString stringWithFormat:kFormat, kHandlerIndentationLevelForRow, indexPath.section, indexPath.row];
     [self setHandler:block forKey:key target:self.dynamicDelegate];
 }
 

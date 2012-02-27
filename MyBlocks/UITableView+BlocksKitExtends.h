@@ -34,6 +34,8 @@ typedef id (^BKTableViewTableReturnBlock)(UITableView *tableView);
 typedef NSInteger (^BKTableViewIndexTitleReturnIntegerBlock)(UITableView *tableView, NSString *title, NSInteger index);
 typedef void (^BKTableViewStyleBlock)(UITableView *tableView, UITableViewCellEditingStyle style, NSIndexPath *indexPath);
 typedef void (^BKTableViewMoveBlock)(UITableView *tableView, NSIndexPath *sourceIndexPath, NSIndexPath *destinationIndexPath);
+typedef id (^BKTableViewMoveReturnBlock)(UITableView *tableView, NSIndexPath *sourceIndexPath, NSIndexPath *destinationIndexPath);
+typedef NSInteger (^BKTableViewIndexPathReturnIntegerBlock)(UITableView *tableView, NSIndexPath *indexPath);
 
 typedef void (^BKTableViewBlock)(UITableView *tableView, NSIndexPath *indexPath);
 typedef id (^BKTableViewReturnBlock)(UITableView *tableView, NSIndexPath *indexPath);
@@ -71,7 +73,8 @@ typedef void (^BKTableViewActionBlock)(UITableView *tableView, SEL action, NSInd
 - (void)setHandler:(BKTableViewReturnBoolBlock)block forShouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)setHandler:(BKTableViewBlock)block forWillBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)setHandler:(BKTableViewBlock)block forDidEndEditingRowAtIndexPath:(NSIndexPath *)indexPath;
-
+- (void)setHandler:(BKTableViewMoveReturnBlock)block forTargetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)indexPath;
+- (void)setHandler:(BKTableViewIndexPathReturnIntegerBlock)block forIndentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)setHandler:(BKTableViewReturnBoolBlock)block forShouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_5_0);
 - (void)setHandler:(BKTableViewActionReturnBoolBlock)block forCanPerformActionForRowAtIndexPath:(NSIndexPath *)indexPath __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_5_0);
 - (void)setHandler:(BKTableViewActionBlock)block forPerformActionForRowAtIndexPath:(NSIndexPath *)indexPath __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_5_0);

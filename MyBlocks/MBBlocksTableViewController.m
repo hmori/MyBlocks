@@ -200,6 +200,13 @@
         [tableView setHandler:^BOOL(UITableView *tv, NSIndexPath *ip){
             return YES;
         } forCanMoveRowAtIndexPath:indexPath];
+        // Judge allow move position.
+        [tableView setHandler:^id(UITableView *tv, NSIndexPath *fromIndexPath, NSIndexPath *toIndexPath){
+            if (toIndexPath.section == 1) {
+                return toIndexPath;
+            }
+            return fromIndexPath;
+        } forTargetIndexPathForMoveFromRowAtIndexPath:indexPath];
     }
     return cell;
 }

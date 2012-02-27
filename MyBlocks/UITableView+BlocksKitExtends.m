@@ -197,7 +197,7 @@ static NSString * const kHandlerMoveRowAtIndexPath = @"kHandlerMoveRowAtIndexPat
     if (block) {
         ret = ((BKTableViewReturnBlock)block)(tableView, indexPath);
     }
-    return indexPath;
+    return ret;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -172,20 +172,20 @@
         // DidSelect
         [tableView setHandler:^(UITableView *tv, NSIndexPath *ip){
             [tv deselectRowAtIndexPath:ip animated:YES];
-            [[[UIAlertView alloc] initWithTitle:@"DidSelect Cell" 
-                                        message:[NSString stringWithFormat:@"section=%d, row=%d", indexPath.section, indexPath.row] 
-                                       delegate:nil 
-                              cancelButtonTitle:@"Close" 
-                              otherButtonTitles:nil] show];
+            [[[[UIAlertView alloc] initWithTitle:@"DidSelect Cell" 
+                                         message:[NSString stringWithFormat:@"section=%d, row=%d", indexPath.section, indexPath.row] 
+                                        delegate:nil 
+                               cancelButtonTitle:@"Close" 
+                               otherButtonTitles:nil] autorelease] show];
         } forDidSelectRowAtIndexPath:indexPath];
         
         // AccessoryButtonTapped
         [tableView setHandler:^(UITableView *tv, NSIndexPath *ip){
-            [[[UIAlertView alloc] initWithTitle:@"AccessoryButtonTapped" 
-                                        message:[NSString stringWithFormat:@"section=%d, row=%d", indexPath.section, indexPath.row] 
-                                       delegate:nil 
-                              cancelButtonTitle:@"Close" 
-                              otherButtonTitles:nil] show];
+            [[[[UIAlertView alloc] initWithTitle:@"AccessoryButtonTapped" 
+                                         message:[NSString stringWithFormat:@"section=%d, row=%d", indexPath.section, indexPath.row] 
+                                        delegate:nil 
+                               cancelButtonTitle:@"Close" 
+                               otherButtonTitles:nil] autorelease] show];
         } forAccessoryButtonTappedForRowWithIndexPath:indexPath];
 
         // Editable Flag

@@ -47,5 +47,71 @@
             </BreakpointActionProxy>
          </Actions>
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "Yes"
+         isPathRelative = "1"
+         filePath = "MyBlocks/MBMasterViewController.m"
+         timestampString = "352285186.152905"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "17"
+         endingLineNumber = "17"
+         landmarkName = "-dealloc"
+         landmarkType = "5">
+         <Actions>
+            <BreakpointActionProxy
+               ActionType = "Xcode.BreakpointAction.Sound">
+               <ActionContent
+                  soundName = "Basso">
+               </ActionContent>
+            </BreakpointActionProxy>
+         </Actions>
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "Yes"
+         isPathRelative = "1"
+         filePath = "MyBlocks/MBDetail1ViewController.m"
+         timestampString = "352285202.472116"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "14"
+         endingLineNumber = "14"
+         landmarkName = "-dealloc"
+         landmarkType = "5">
+         <Actions>
+            <BreakpointActionProxy
+               ActionType = "Xcode.BreakpointAction.Sound">
+               <ActionContent
+                  soundName = "Basso">
+               </ActionContent>
+            </BreakpointActionProxy>
+         </Actions>
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "Yes"
+         isPathRelative = "1"
+         filePath = "MyBlocks/MBDetail2ViewController.m"
+         timestampString = "352285231.363436"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "14"
+         endingLineNumber = "14"
+         landmarkName = "-dealloc"
+         landmarkType = "5">
+         <Actions>
+            <BreakpointActionProxy
+               ActionType = "Xcode.BreakpointAction.Sound">
+               <ActionContent
+                  soundName = "Basso">
+               </ActionContent>
+            </BreakpointActionProxy>
+         </Actions>
+      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

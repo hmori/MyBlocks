@@ -9,6 +9,7 @@
 #import "MBViewController.h"
 #import "MBBlocksViewController.h"
 #import "MBBlocksTableViewController.h"
+#import "MBMasterViewController.h"
 
 @implementation MBViewController
 
@@ -42,7 +43,18 @@
         [weakSelf presentModalViewController:nav animated:YES];
     } forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:blocksTableViewButton];
-
+    
+    
+    y += 44+40;
+    UIButton *masterViewButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    masterViewButton.frame = CGRectMake(40, y, 240, 44);
+    [masterViewButton setTitle:@"MBMasterViewController" forState:UIControlStateNormal];
+    [masterViewButton addEventHandler:^(id sender) {
+        MBMasterViewController *ctl = [[[MBMasterViewController alloc] init] autorelease];
+        UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:ctl] autorelease];
+        [weakSelf presentModalViewController:nav animated:YES];
+    } forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:masterViewButton];
 }
 
 @end

@@ -10,6 +10,10 @@
 		B6419F5614FA690D00652E0C /* UITableView+BlocksKitExtends.m in Sources */ = {isa = PBXBuildFile; fileRef = B6419F5514FA690D00652E0C /* UITableView+BlocksKitExtends.m */; };
 		B6419F5914FA69E600652E0C /* MBBlocksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6419F5814FA69E600652E0C /* MBBlocksTableViewController.m */; };
 		B648707014EE46D1008E0B48 /* MBBlocksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B648706F14EE46D1008E0B48 /* MBBlocksViewController.m */; };
+		B6701F6F14FF7076004A4D67 /* MBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6701F6E14FF7076004A4D67 /* MBBaseViewController.m */; };
+		B6701F7214FF70B8004A4D67 /* MBMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6701F7114FF70B8004A4D67 /* MBMasterViewController.m */; };
+		B6701F7514FF70F8004A4D67 /* MBDetail1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6701F7414FF70F8004A4D67 /* MBDetail1ViewController.m */; };
+		B6701F7814FF712E004A4D67 /* MBDetail2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6701F7714FF712E004A4D67 /* MBDetail2ViewController.m */; };
 		B6901BDB14E9E840004FCBDD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D2599C14E9E6DC0021726B /* MessageUI.framework */; };
 		B6AEE8DA14E96BC200FC1A50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AEE8D914E96BC200FC1A50 /* UIKit.framework */; };
 		B6AEE8DC14E96BC200FC1A50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AEE8DB14E96BC200FC1A50 /* Foundation.framework */; };
@@ -73,6 +77,14 @@
 		B6419F5814FA69E600652E0C /* MBBlocksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBlocksTableViewController.m; sourceTree = "<group>"; };
 		B648706E14EE46D1008E0B48 /* MBBlocksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBlocksViewController.h; sourceTree = "<group>"; };
 		B648706F14EE46D1008E0B48 /* MBBlocksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBlocksViewController.m; sourceTree = "<group>"; };
+		B6701F6D14FF7076004A4D67 /* MBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBaseViewController.h; sourceTree = "<group>"; };
+		B6701F6E14FF7076004A4D67 /* MBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBaseViewController.m; sourceTree = "<group>"; };
+		B6701F7014FF70B8004A4D67 /* MBMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMasterViewController.h; sourceTree = "<group>"; };
+		B6701F7114FF70B8004A4D67 /* MBMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMasterViewController.m; sourceTree = "<group>"; };
+		B6701F7314FF70F8004A4D67 /* MBDetail1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDetail1ViewController.h; sourceTree = "<group>"; };
+		B6701F7414FF70F8004A4D67 /* MBDetail1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBDetail1ViewController.m; sourceTree = "<group>"; };
+		B6701F7614FF712E004A4D67 /* MBDetail2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDetail2ViewController.h; sourceTree = "<group>"; };
+		B6701F7714FF712E004A4D67 /* MBDetail2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBDetail2ViewController.m; sourceTree = "<group>"; };
 		B6AEE8D514E96BC200FC1A50 /* MyBlocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBlocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6AEE8D914E96BC200FC1A50 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B6AEE8DB14E96BC200FC1A50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +126,47 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
+		B6701F6914FF6F03004A4D67 /* BlocksKitSample */ = {
+			isa = PBXGroup;
+			children = (
+				B648706E14EE46D1008E0B48 /* MBBlocksViewController.h */,
+				B648706F14EE46D1008E0B48 /* MBBlocksViewController.m */,
+			);
+			name = BlocksKitSample;
+			sourceTree = "<group>";
+		};
+		B6701F6A14FF6F34004A4D67 /* TableViewSample */ = {
+			isa = PBXGroup;
+			children = (
+				B6419F5714FA69E600652E0C /* MBBlocksTableViewController.h */,
+				B6419F5814FA69E600652E0C /* MBBlocksTableViewController.m */,
+			);
+			name = TableViewSample;
+			sourceTree = "<group>";
+		};
+		B6701F6B14FF6F46004A4D67 /* ViewLifeCycleSample */ = {
+			isa = PBXGroup;
+			children = (
+				B6701F6C14FF703D004A4D67 /* Base */,
+				B6701F7014FF70B8004A4D67 /* MBMasterViewController.h */,
+				B6701F7114FF70B8004A4D67 /* MBMasterViewController.m */,
+				B6701F7314FF70F8004A4D67 /* MBDetail1ViewController.h */,
+				B6701F7414FF70F8004A4D67 /* MBDetail1ViewController.m */,
+				B6701F7614FF712E004A4D67 /* MBDetail2ViewController.h */,
+				B6701F7714FF712E004A4D67 /* MBDetail2ViewController.m */,
+			);
+			name = ViewLifeCycleSample;
+			sourceTree = "<group>";
+		};
+		B6701F6C14FF703D004A4D67 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B6701F6D14FF7076004A4D67 /* MBBaseViewController.h */,
+				B6701F6E14FF7076004A4D67 /* MBBaseViewController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 		B6AEE8CA14E96BC200FC1A50 = {
 			isa = PBXGroup;
 			children = (
@@ -146,15 +199,14 @@
 		B6AEE8DF14E96BC200FC1A50 /* MyBlocks */ = {
 			isa = PBXGroup;
 			children = (
-				B6419F5314FA688500652E0C /* Category */,
 				B6AEE8E814E96BC200FC1A50 /* MBAppDelegate.h */,
 				B6AEE8E914E96BC200FC1A50 /* MBAppDelegate.m */,
 				B6AEE8EB14E96BC200FC1A50 /* MBViewController.h */,
 				B6AEE8EC14E96BC200FC1A50 /* MBViewController.m */,
-				B648706E14EE46D1008E0B48 /* MBBlocksViewController.h */,
-				B648706F14EE46D1008E0B48 /* MBBlocksViewController.m */,
-				B6419F5714FA69E600652E0C /* MBBlocksTableViewController.h */,
-				B6419F5814FA69E600652E0C /* MBBlocksTableViewController.m */,
+				B6419F5314FA688500652E0C /* Category */,
+				B6701F6914FF6F03004A4D67 /* BlocksKitSample */,
+				B6701F6A14FF6F34004A4D67 /* TableViewSample */,
+				B6701F6B14FF6F46004A4D67 /* ViewLifeCycleSample */,
 				B6AEE8E014E96BC200FC1A50 /* Supporting Files */,
 			);
 			path = MyBlocks;
@@ -311,6 +363,10 @@
 				B648707014EE46D1008E0B48 /* MBBlocksViewController.m in Sources */,
 				B6419F5614FA690D00652E0C /* UITableView+BlocksKitExtends.m in Sources */,
 				B6419F5914FA69E600652E0C /* MBBlocksTableViewController.m in Sources */,
+				B6701F6F14FF7076004A4D67 /* MBBaseViewController.m in Sources */,
+				B6701F7214FF70B8004A4D67 /* MBMasterViewController.m in Sources */,
+				B6701F7514FF70F8004A4D67 /* MBDetail1ViewController.m in Sources */,
+				B6701F7814FF712E004A4D67 /* MBDetail2ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
